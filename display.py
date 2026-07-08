@@ -10,17 +10,11 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import cv2
 import websockets
 
-from main_test import UWCNNEnhancer
+from dehaze.dehaze_uwcnn import UWCNNEnhancer
 
-try:
-    from camera.camera import MultiUsbCamera
-except ImportError:
-    from camera import MultiUsbCamera
+from camera.camera import MultiUsbCamera
 
-try:
-    from dehaze.dehaze_UDCP import CONFIG_PATH, FfmpegCamera, UDCPDehazer, load_camera_config, resize_for_preview
-except ImportError:
-    from dehaze_UDCP import CONFIG_PATH, FfmpegCamera, UDCPDehazer, load_camera_config, resize_for_preview
+from dehaze.dehaze_UDCP import CONFIG_PATH, FfmpegCamera, UDCPDehazer, load_camera_config, resize_for_preview
 
 
 DEFAULT_HTTP_HOST = "0.0.0.0"
