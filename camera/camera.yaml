@@ -1,0 +1,21 @@
+width: 480
+height: 320
+fps: 30
+
+devices:
+  - /dev/video0
+  
+
+alignment:
+  enabled: false
+  source_device: /dev/v4l/by-path/platform-xhci-hcd.2.auto-usb-0:1.2:1.0-video-index0
+  reference_device: /dev/v4l/by-path/platform-xhci-hcd.2.auto-usb-0:1.1:1.0-video-index0
+  flip_horizontal: false
+  homography:
+    - [1.0107859298493556, -0.01768074202139351, 142.24218376476412]
+    - [0.011860549983009037, 1.0006051449958036, 93.35800468684862]
+    - [0.000008283104073590986, -0.000004958926489425385, 1.0]
+
+crop:
+  width: 800
+  height: 600
